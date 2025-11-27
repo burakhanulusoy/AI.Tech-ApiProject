@@ -1,0 +1,12 @@
+﻿using AiTech.Entity.Entities.Common;
+
+namespace AiTech.Entity.Entities
+{
+    public class FAQ : BaseEntity
+    {
+        public string Question  { get; set; }
+        public string Answer  { get; set; }
+
+
+    }
+}
