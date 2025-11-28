@@ -4,9 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AiTech.DataAccess.Repositories.GenericRepositories
 {
-    public class GenericRepository<Tentity>(AppDbContext _context) : IRepository<Tentity> where Tentity : BaseEntity
+    public class GenericRepository<Tentity>(AppDbContext context) : IRepository<Tentity> where Tentity : BaseEntity
     {
-        
+
+        protected readonly AppDbContext _context = context;
+
 
         public async Task CreateAsync(Tentity entity)
         {

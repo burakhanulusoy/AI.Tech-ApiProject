@@ -1,4 +1,5 @@
 ﻿using AiTech.Business.Services.CategoryServices;
+using AiTech.Business.Services.ProjectServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AiTech.Business.Extensions
@@ -12,6 +13,7 @@ namespace AiTech.Business.Extensions
 
 
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProjectService, ProjectService>();//dependecy injection
 
         }
 
