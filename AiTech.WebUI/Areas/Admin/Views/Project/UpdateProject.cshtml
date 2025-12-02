@@ -1,0 +1,35 @@
+﻿@model UpdateProjectDto
+@{
+    ViewData["Title"] = "UpdateProject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+
+    <label>ımage</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    <br />
+
+
+    <label>kategori</label>
+    <select type="text" asp-for="CategoryId" class="form-control" asp-items="@ViewBag.categories">
+
+        <option selected disabled>Kategori sec</option>
+
+    </select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+
+
+</form>
+
